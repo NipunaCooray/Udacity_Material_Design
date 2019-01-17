@@ -77,7 +77,7 @@
                 android:layout_gravity="center_horizontal"
                 app:layout_collapseMode="parallax"
                 android:scaleType="fitCenter"/>
-            
+
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
