@@ -43,4 +43,7 @@ dependencies {
 
     //design support library
     implementation "com.android.support:design:$androidSupportVersion"
+
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }
