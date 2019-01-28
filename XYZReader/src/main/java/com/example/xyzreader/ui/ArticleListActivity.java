@@ -59,7 +59,7 @@ public class ArticleListActivity extends AppCompatActivity implements
     // Most time functions can only handle 1902 - 2037
     private GregorianCalendar START_OF_EPOCH = new GregorianCalendar(2,1,1);
 
-    Activity mActivity;
+    ImageView mSharedImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,10 +75,12 @@ public class ArticleListActivity extends AppCompatActivity implements
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
+
+
         getLoaderManager().initLoader(0, null, this);
 
 
-        mActivity = this;
+
 
         if (savedInstanceState == null) {
             refresh();
@@ -159,7 +161,6 @@ public class ArticleListActivity extends AppCompatActivity implements
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
 
                     startActivity(new Intent(Intent.ACTION_VIEW,
                             ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
